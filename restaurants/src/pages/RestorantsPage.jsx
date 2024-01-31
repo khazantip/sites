@@ -8,7 +8,7 @@ const RestaurantsMenu = () => {
   const resData = serverResponse;
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [filteredRest, setFilteredRest] = useState([]);
+  const [filteredRest, setFilteredRest] = useState(serverResponse.restaurants);
   useEffect(() => {
     const searchText = searchParams.get("search")?.toLowerCase();
     setFilteredRest(
